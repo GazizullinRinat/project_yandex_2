@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link type="image/x-icon" href="/static/img/kpfu.png" rel="shortcut icon">
+    <title>Добавить заказ</title>
+</head>
+<body>
+<div class="box">
+    <form method="post">
+        <div class="container">
+            <div class="box1">
+                <div class="card">
+                    <h1>Логин: {{current_user.login}}</h1>
+                </div>
+                <div class="card">
+                    <h1>Имя: {{current_user.name}}</h1>
+                </div>
+                <div class="card">
+                    <h1>Фамилия: {{current_user.surname}}</h1>
+                </div>
+                <div class="card">
+                    <h1>Доступ: {{current_user.permissions}}</h1>
+                </div>
+            </div>
+            <div class="box-btn">
+                <div class="card">
+                    <a href="/staff_menu/queue">
+                        <button type="button" class="btn-card">Очередь</button>
+                    </a>
+                    <a href="/staff_menu/timetable">
+                        <button type="button" class="btn-card">Расписание</button>
+                    </a>
+                    <a href="/change_password">
+                        <button type="button" class="btn-card">Сменить пароль</button>
+                    </a>
+                    <a href="/logout">
+                        <button type="button" class="btn-card">Выход</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

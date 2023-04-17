@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link type="image/x-icon" href="/static/img/kpfu.png" rel="shortcut icon">
+    <title>Список блюд</title>
+</head>
+<body>
+<script src="https://snipp.ru/cdn/jquery/2.1.1/jquery.min.js"></script>
+<script>
+$('.input-file input[type=file]').on('change', function(){
+	let file = this.files[0];
+	$(this).next().html(file.name);
+});
+</script>
+<div class="box">
+    <form method="post">
+        <div class="container">
+            <div class="box1">
+                <div class="card">
+                    <h1>Блюда:</h1>
+                </div>
+                {% for dish in dishes %}
+                <div class="card">
+                    <h1>Название: {{ dish.title }}</h1>
+                    <a href="/admin_menu/dishes/detailed-{{dish.id}}">
+                        <button class="btn_order" type="button">Подробнее</button>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="box-btn">
+                <div class="card">
+                    {% if current_user.permissions == "administrator" %}
+                    <a href="/admin_menu/dishes/menu-extension">
+                        <button type="button" class="btn-card" >Добавить блюдо</button>
+                    </a>
+                    {% endif %}
+                    <a href="/admin_menu">
+                        <button type="button" class="btn-card">Назад</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

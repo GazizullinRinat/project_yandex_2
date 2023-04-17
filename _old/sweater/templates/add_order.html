@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Добавить заказ</title>
+</head>
+<body>
+<div class="box">
+    <form method="post">
+        <div class="container">
+            <div class="box1">
+                <div class="card">
+                    <h1>Общая цена: {{cost}} рублей</h1>
+                </div>
+                {% for dish in dishes %}
+                <div class="card">
+                    <h1> {{dish.title}}</h1>
+                    <h1>Цена: {{dish.price}}</h1>
+                    <a href="/home/add-order/delete-dish-{{dish.id}}">
+                        <button type="button" class="btn_order">Удалить блюдо</button>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="box-btn">
+                <div class="card">
+                    <a href="/home/add-order/add-dish-to-order">
+                        <button type="button" class="btn-card">Добавить блюдо</button>
+                    </a>
+                    <a href="/home/add-order/confirm-order">
+                        <button type="button" class="btn-card">Заказать</button>
+                    </a>
+                    <a onclick="javascript:history.back(); return false;">
+                        <button type="button" class="btn-card">Назад</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

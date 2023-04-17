@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Регистрация нового пользователя</title>
+</head>
+<body>
+<div class="box">
+    <form method="post">
+        <div class="container">
+            <div class="box1">
+                <div class="card">
+                    <h1>Зарегистрировать пользователя:</h1>
+                </div>
+                <input type="text" name="login" placeholder="Логин" required>
+                <input type="text" name="name" placeholder="Имя" required>
+                <input type="text" name="surname" placeholder="Фамилия" required>
+                <input type="text" name="grade" placeholder="Класс" required>
+                <input type="password" name="password" placeholder="Пароль" required>
+                <input type="password" name="password_2" placeholder="Подтвердить пароль" required>
+                <input type="text" name="permissions" placeholder="Статус" required>
+            </div>
+            <div class="box-btn">
+                <div class="card">
+                    <button type="submit" class="btn-card">Зарегистрировать</button>
+                    <a onclick="javascript:history.back(); return false;">
+                        <button type="button" class="btn-card">Назад</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

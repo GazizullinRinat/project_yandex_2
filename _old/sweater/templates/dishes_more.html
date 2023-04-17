@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Подробнее</title>
+</head>
+<body>
+<div class="box">
+    <form method="post">
+        <div class="container">
+            <div class="box1">
+                <div class="card">
+                    <h1>Id: {{ dish.id }}</h1>
+                </div>
+                <div class="card">
+                    <h1>Название: {{ dish.title }}</h1>
+                </div>
+                <div class="card">
+                    <h1>Цена: {{ dish.price }}</h1>
+                </div>
+                <div class="card">
+                    <h1>Описание: {{ dish.description }}</h1>
+                </div>
+                <div class="card">
+                    {% if dish.image_url != '-' %}
+                    <img src={{dish.image_url}}>
+                    {% else %}
+                    <img src="/static/img/placeholder.png">
+                    {% endif %}
+                </div>
+            </div>
+            <div class="box-btn">
+                <div class="card">
+                    <a onclick="javascript:history.back(); return false;">
+                        <button type="button" class="btn-card">Назад</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

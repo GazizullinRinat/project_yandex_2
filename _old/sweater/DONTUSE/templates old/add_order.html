@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<p>{{cost}}</p>
+{% for dish in dishes %}
+<div>
+    {{dish.title}}
+    <p>Цена: {{dish.price}}</p>
+    <a href="/home/add-order/delete-dish-{{dish.id}}">Удалить блюдо</a>
+</div>
+{% endfor %}
+<a href="/home/add-order/add-dish-to-order">Добавить блюдо</a>
+<a href="/home/add-order/confirm-order">Заказать</a>
+</body>
+</html>

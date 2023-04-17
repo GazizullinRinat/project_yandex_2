@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style 2.css">
+    <link type="image/x-icon" href="/static/img/kpfu.png" rel="shortcut icon">
+    <title>Добавление блюда в меню</title>
+</head>
+<body>
+<div class="box">
+    <form method="post" enctype="multipart/form-data">
+        <div class="container">
+            <div class="box1">
+                <div class="card">
+                    <h1>Добавление нового блюда:</h1>
+                </div>
+                <input type="text" name="title" placeholder="Название" required>
+                <input type="text" name="price" placeholder="Цена" required>
+                <input type="text" name="description" placeholder="Описание" required>
+            </div>
+            <div class="box-btn">
+                <div class="card">
+                    <button type="submit" class="btn-card">Добавить в меню</button>
+                    <a href="/admin_menu/dishes">
+                        <button type="button" class="btn-card">Назад</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

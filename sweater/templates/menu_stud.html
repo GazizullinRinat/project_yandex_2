@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link type="image/x-icon" href="/static/img/kpfu.png" rel="shortcut icon">
+    <title>Меню ученика</title>
+    <meta http-equiv="Refresh" content="10"/>
+</head>
+<body>
+<div class="box">
+    <form method="post">
+        <div class="container">
+            <div class="box1">
+                <div class="card">
+                    <h1>Баланс: {{balance}} рублей</h1>
+                </div>
+                <div class="card">
+                    <h1>Текущие заказы:</h1>
+                </div>
+                {% for order in orders %}
+                <div class="card">
+                    <h1>Заказ №{{order.id}} от {{order.date}}</h1>
+                    <a href="/home/order-{{order.id}}">
+                        <button class="btn_order" type="button">Открыть</button>
+                    </a>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="box-btn">
+                <div class="card">
+                    <a href="/home/add-order">
+                        <button class="btn-card" type="button">Создать заказ</button>
+                    </a>
+                    <a href="/home/profile">
+                        <button class="btn-card" type="button">Профиль</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

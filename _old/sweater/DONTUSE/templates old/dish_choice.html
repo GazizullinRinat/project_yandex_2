@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  {% for dish in dishes %}
+  <p>{{dish.title}}</p>
+  <p>{{dish.description}}</p>
+  <p>Цена: {{dish.price}}</p>
+  <a href="/home/add-order/add-dish-to-order/add-{{dish.id}}">Добавить</a>
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <title>Добавить заказ</title>
+</head>
+<body>
+<div class="box">
+    <form method="post">
+        <div class="container">
+            <div class="box1">
+                <div class="card">
+                    <h1>Логин: {{user.login}}</h1>
+                </div>
+                <div class="card">
+                    <h1>Имя: {{user.name}}</h1>
+                </div>
+                <div class="card">
+                    <h1>Фамилия: {{user.surname}}</h1>
+                </div>
+                <div class="card">
+                    <h1>Доступ: {{user.permissions}}</h1>
+                </div>
+            </div>
+            <div class="box-btn">
+                <div class="card">
+                    <a href="/admin_menu/dishes">
+                        <button type="button" class="btn-card">Блюда</button>
+                    </a>
+                    <a href="/admin_menu/users">
+                        <button type="button" class="btn-card">Пользователи</button>
+                    </a>
+                    <a href="/admin_menu/orders">
+                        <button type="button" class="btn-card">Заказы</button>
+                    </a>
+                    <a href="/change_password">
+                        <button type="button" class="btn-card">Сменить пароль</button>
+                    </a>
+                    <a href="/logout">
+                        <button type="button" class="btn-card">Выход</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>

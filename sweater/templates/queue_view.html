@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link type="image/x-icon" href="/static/img/kpfu.png" rel="shortcut icon">
+    <title>Очередь</title>
+</head>
+<div class="box">
+    <form method="post">
+        <div class="container">
+            <div class="box1">
+                <div class="card">
+                    <h1>Заказов в очереди: {{ queue_length }}</h1>
+                </div>
+                {% for dish in dishes %}
+                <div class="card">
+                    <h1>{{ dish.title }}</h1>
+                </div>
+                {% endfor %}
+            </div>
+            <div class="box-btn">
+                <div class="card">
+                    {% if dishes %}
+                    <a href="/staff_menu/queue/confirm_order">
+                        <button class="btn-card" type="button">Подтвердить заказ</button>
+                    </a>
+                    <a href="/staff_menu/queue/deny_order">
+                        <button class="btn-card" type="button">Отклонить заказ</button>
+                    </a>
+                    {% endif %}
+                    <a href="/staff_menu">
+                        <button type="button" class="btn-card">Назад</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+</body>
+</html>
